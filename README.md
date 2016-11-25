@@ -45,7 +45,7 @@ Zakres projektu obejmuje:
 ad.4
 Zakres projektu obejmuje: 
 
-1. TWorzenie i wykorzystywanie własnych funkcji w języku PHP. 
+1. Tworzenie i wykorzystywanie własnych funkcji w języku PHP. 
 2. Obiektową komunikację z bazą danych za pomocą języka zapytań SQL. 
 3. Weryfikację formularza po stronie serwera (użycie wbudowanych funckji języka PHP).
 4. Zabezpieczenie formularza przed wstrzykiwaniem SQL. 
