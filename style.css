@@ -1,0 +1,66 @@
+body {
+		background-color:#21273B;
+		color:#fff;
+	
+	}
+.start {
+		margin-bottom:60px;
+		margin-top:120px;
+	}
+#popUp {
+		margin-top:20px;
+		text-decoration:underline;
+		cursor:pointer;
+	}
+.logButton{
+		margin-bottom:20px;
+	}
+.regButton{
+		margin-bottom:20px;
+	}
+form>h5 {
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+	
+.fixHeight{
+		min-height:70px;
+	}
+	
+#termsResign, #termsBack {
+		margin-bottom:10px;
+	}
+	
+#regError{
+		display:none;
+	}
+	
+.disappear{
+		display:none;
+	}
+	
+.register {
+		position:fixed;
+		top:75px;
+		overflow-y: auto;
+		height:500px;
+		background-color:#43595d;
+	}
+	
+#termsOfUse {
+		position:fixed;
+		top:50px;
+		height:600px;
+		overflow-y: auto;
+		background-color:#43595d;
+	}
+	
+#termsPopUp{
+		cursor:pointer;
+		text-decoration:underline;
+	}
+	
+.closePopUp {
+		color:white;
+	}
+	
