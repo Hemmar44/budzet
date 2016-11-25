@@ -76,7 +76,7 @@ if(isset($_GET["logout"])) {
 	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-	<script type="text/javascript" src="mainscript.js"></script>
+	<script type="text/javascript" src="js/mainscript.js"></script>
 
 	
 

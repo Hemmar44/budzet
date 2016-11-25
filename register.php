@@ -25,7 +25,7 @@ if(isset($_SESSION["con_error"])) {echo["con_error"];}
 	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 
 	
 </style>
