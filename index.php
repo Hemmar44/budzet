@@ -46,7 +46,7 @@ if(isset($_SESSION["con_error"])) {echo["con_error"];}
 		
 
 
-	<form action="login.php" method="post">
+	<form action="php/tools/login.php" method="post">
 		<?php //if((array_key_exists("ok",$_SESSION)) and ($_SESSION["ok"] !='')) {
 		if(isset($_SESSION["ok"])){
 		echo "<div class='alert alert-success col-md-6 offset-md-3 text-md-center' role='alert'>".$_SESSION["ok"]."</div>"; 
@@ -87,7 +87,7 @@ if(isset($_SESSION["con_error"])) {echo["con_error"];}
         </button>
 	</div>
 	
-	<form method="post" action="verify.php">
+	<form method="post" action="php/tools/verify.php">
 	<h5 class="text-md-center">Wypełnij wszystkie pola, żeby się zarejestrować.</h5>
 
 		

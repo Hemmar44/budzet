@@ -106,7 +106,7 @@ $(function(){
 		}
 		$.ajax({ //sending request and recivieng nice table from the server
 		method: "POST",
-		url: "updateincome.php",
+		url: "../ajax/updateincome.php",
 		data: { text: text, values: amount } 
 		})
 		.done(function( msg ) {
@@ -153,7 +153,7 @@ $(function(){
 		}
 		$.ajax({ //sending request and recivieng nice table from the server
 		method: "POST",
-		url: "editincome.php",
+		url: "../ajax/editincome.php",
 		data: { text: text, values: amount } 
 		})
 		.done(function( msg ) {
@@ -260,7 +260,7 @@ $(function(){
 	
 		$.ajax({ //sending request and recivieng nice table from the server
 		method: "POST",
-		url: "editcosts.php",
+		url: "../ajax/editcosts.php",
 		data: { type: creditType, values: payment, table: name},
 		context: $(this),
 		//var dfd = $.Deferred(),
@@ -585,7 +585,7 @@ $(function(){
 				checkbox.closest("tr").remove();
 				$.ajax({ //sending request and recivieng nice table from the server
 				method: "POST",
-				url: "deletecosts.php",
+				url: "../ajax/deletecosts.php",
 				context: $(this),
 				data: { deleteId: id, table: name }
 					})
@@ -638,7 +638,7 @@ $(function(){
 			var name = $(this).closest("main").find(".withSpan").attr("id");
 			$.ajax({ //sending request and recivieng nice table from the server
 				method: "POST",
-				url: "updatecosts.php",
+				url: "../ajax/updatecosts.php",
 				context:$(this),
 				data: { updateId:id, value: value, table: name  }
 				})

@@ -4,7 +4,7 @@ session_start();
 
 if(array_key_exists("login",$_POST) and array_key_exists("pass",$_POST) and ($_POST["login"]!='') and ($_POST["pass"]!='')) {
 	
-	include_once("connect.php");
+	include_once("../database/connect.php");
 	
 		//exceptions
 	mysqli_report(MYSQLI_REPORT_STRICT);
@@ -41,7 +41,7 @@ if(array_key_exists("login",$_POST) and array_key_exists("pass",$_POST) and ($_P
 			
 				if(password_verify($pass, $db_pass)) {
 					
-					header("Location: main.php");
+					header("Location: ../content/main.php");
 					
 					$_SESSION["login"] = $login;
 					$_SESSION["id"] = $id;

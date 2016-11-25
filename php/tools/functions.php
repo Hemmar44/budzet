@@ -64,7 +64,7 @@ function tableDrawerImp($value1, $value2, $klass) {
 
 function onLoadTable($tableName) {
 			
-			include("connect.php");
+			include("../database/connect.php");
 
 			$link = new mysqli($host, $user, $password, $database);
 			
@@ -92,7 +92,7 @@ function onLoadTable($tableName) {
 			
 			function oneRow($tableName) {
 			
-			include("connect.php");
+			include("../database/connect.php");
 
 			$link = new mysqli($host, $user, $password, $database);
 			
@@ -142,7 +142,7 @@ function onLoadTable($tableName) {
 		
 		function getSum($column, $table, $id) {
 			
-			include("connect.php");
+			include("../database/connect.php");
 
 			$link = new mysqli($host, $user, $password, $database);
 			
@@ -167,7 +167,7 @@ function onLoadTable($tableName) {
 			
 		function receivingIncome($id) {
 			
-			include("connect.php");
+			include("../database/connect.php");
 
 			$link = new mysqli($host, $user, $password, $database);
 			

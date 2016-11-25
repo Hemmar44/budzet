@@ -92,7 +92,7 @@ if(array_key_exists("nick",$_POST)){
 	
 	//starting database connection if everything is ok
 	
-	include("connect.php");
+	include("../database/connect.php");
 	//exceptions 
 	mysqli_report(MYSQLI_REPORT_STRICT);
 		
@@ -141,7 +141,7 @@ if(array_key_exists("nick",$_POST)){
 					//echo $_SESSION["db_errors"];
 					
 					
-					header("Location: register.php");
+					header("Location: ../../index.php");
 					$link -> close();
 					exit();
 					
@@ -154,7 +154,7 @@ if(array_key_exists("nick",$_POST)){
 					if($link -> query("INSERT INTO users VALUES(NULL, '$nick', '$email', '$hashedPassword')")) {
 						
 						$_SESSION["ok"] = "<p id='phpok'> Udało Ci się założyć konto, możesz się już zalogować. </p>";//succes message
-						header("Location: register.php");
+						header("Location: ../../index.php");
 						$link -> close();
 						exit();
 					
@@ -187,7 +187,7 @@ if(array_key_exists("nick",$_POST)){
 	}
 //if there are no nick and email, going to register.php
 else {
-	header("Location: main.php");
+	header("Location: ../../index.php");
 }
 
 

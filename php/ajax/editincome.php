@@ -4,7 +4,7 @@ session_start();
 //checking if variable exists
 if(isset($_POST["text"])) {
      //including connection
-	include_once("connect.php");
+	include_once("../database/connect.php");
 	
 		try {
 			//establishing connection
@@ -46,7 +46,7 @@ if(isset($_POST["text"])) {
 				}
 			
 			
-			include_once("functions.php");
+			include_once("../tools/functions.php");
 			$id=$_SESSION["id"];
 			
 			echo $table = receivingIncome($id);//my function to receive the table with income
@@ -69,7 +69,7 @@ if(isset($_POST["text"])) {
 		
 }
 
-else header("Location: main.php");
+else header("Location: ../content/main.php");
 
 
 

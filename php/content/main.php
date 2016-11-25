@@ -4,7 +4,7 @@ session_start();
 
 if((isset($_SESSION["login"])) and ($_SESSION["login"]!='')) {
 
-		include_once("connect.php"); 
+		include_once("../database/connect.php"); 
 	
 		try {
 			
@@ -16,7 +16,7 @@ if((isset($_SESSION["login"])) and ($_SESSION["login"]!='')) {
 				
 			}
 
-			include_once("functions.php");
+			include_once("../tools/functions.php");
 			$id=$_SESSION["id"];
 
 			
@@ -49,13 +49,13 @@ if((isset($_SESSION["login"])) and ($_SESSION["login"]!='')) {
 
 else {
 	
-	header("Location: register.php");
+	header("Location: ../../index.php");
 }
 
 if(isset($_GET["logout"])) {
 	
 	session_unset();
-	header("Location: register.php");
+	header("Location: ../../index.php");
 }
 
 ?>
@@ -69,19 +69,16 @@ if(isset($_GET["logout"])) {
 	
 	<title>Budżet domowy</title>
 	
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/stylemain.css"/>
+	<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/stylemain.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../../jquery-3.1.1.min.js"></script>
 	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/mainscript.js"></script>
+	<script type="text/javascript" src="../../bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../../js/mainscript.js"></script>
 
 	
-
-
-
 </head>
 
 <body>

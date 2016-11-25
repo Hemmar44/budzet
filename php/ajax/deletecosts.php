@@ -4,7 +4,7 @@ session_start();
 
 if(isset($_POST["deleteId"])) {
 	
-	include_once("connect.php");
+	include_once("../database/connect.php");
 	
 		try {
 			
@@ -35,7 +35,7 @@ if(isset($_POST["deleteId"])) {
 				$i++;
 			}
 			
-			include_once("functions.php");
+			include_once("../tools/functions.php");
 			
 			$sum = getSum("payment", $table, $_SESSION["id"]);
 			
@@ -56,7 +56,7 @@ if(isset($_POST["deleteId"])) {
 
 }
 
-else header("Location: main.php");
+else header("Location: ../content/main.php");
 
 
 

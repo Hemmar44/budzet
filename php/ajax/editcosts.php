@@ -4,7 +4,7 @@ session_start();
 
 if(isset($_POST["table"])){
 	
-	include_once("connect.php");
+	include_once("../database/connect.php");
 
 	try {
 
@@ -26,7 +26,7 @@ if(isset($_POST["table"])){
 				
 				$result = $link -> query($query);		
 				
-				include_once("functions.php");
+				include_once("../tools/functions.php");
 				
 				//$sendTable = tableDrawerImp($_POST['type'], $_POST['values'], "payments");
 				
@@ -56,7 +56,7 @@ if(isset($_POST["table"])){
 	
 	}
 
-else header("Location: main.php");
+else header("Location: ../content/main.php");
 	
 
 ?>
