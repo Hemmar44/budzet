@@ -193,7 +193,7 @@ function onLoadTable($tableName) {
 			//echo $rowAmount;
 			$j = 1;
 			
-			$tableHeader = "<table id='savedIncomeTable' class='table-bordered table-sm	table thead-inverse table-hover'><th>Source</th><th>Value</th>";
+			$tableHeader = "<table id='savedIncomeTable' class='table-bordered table-sm	table thead-inverse table-hover'><th>Pozycja</th><th>Wartość</th>";
 			//using table drawer function
 			$tableBody = tableDrawer($result);
 			
