@@ -19,7 +19,7 @@ if(isset($_SESSION["con_error"])) {echo["con_error"];}
 	<title>Budzet domowy - rejestracja</title>
 	
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
 	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
