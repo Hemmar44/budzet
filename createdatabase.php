@@ -26,15 +26,17 @@ if(isset($_POST["database"])){
 		
 		if(!$result) {throw new Exception($link -> error);}
 		
-		else { echo "baza ok <br/>";
-		
+		else { 	
+			$message="";
+			$message.= "baza ok <br/>";
+	
 			$link -> close();
 			
-			createUserTable();
-			createOtherTables("income", "source", "value");
-			createOtherTables("life", "credit", "payment");
-			createOtherTables("loans", "credit", "payment");
-			createOtherTables("mpay", "credit", "payment");
+			$message.=createUserTable();
+			$message.=createOtherTables("income", "source", "value");
+			$message.=createOtherTables("life", "credit", "payment");
+			$message.=createOtherTables("loans", "credit", "payment");
+			$message.=createOtherTables("mpay", "credit", "payment");
 
 			
 		}
@@ -71,7 +73,7 @@ if(isset($_POST["database"])){
 		
 				if(!$result) {throw new Exception($link -> error);}
 					
-				else echo "Tabela users ok <br/>";
+				return $message = "Tabela users ok <br/>";
 				
 				
 				}
@@ -99,7 +101,7 @@ if(isset($_POST["database"])){
 		
 				if(!$result) {throw new Exception($link -> error);}
 					
-				else echo "Tabela '$name' ok <br/>";
+				return $message = "Tabela '$name' ok <br/>";
 				
 				
 				}
@@ -142,7 +144,7 @@ if(isset($_POST["database"])){
 		</thead>
 	</table>
 	<input type="submit" value="Utwórz Bazę"/>
-	<?php print_r($_POST) ?>
+	<?php if(isset($message) and $message!="") echo $message ?>
 
 </form>
 </body>
