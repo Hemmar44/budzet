@@ -27,8 +27,6 @@ if(isset($_SESSION["con_error"])) {echo["con_error"];}
 	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 
-	
-</style>
 
 
 </head>
