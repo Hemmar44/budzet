@@ -25,18 +25,87 @@ if(isset($_POST["database"])){
 		$result = $link -> query($query);
 		
 		if(!$result) {throw new Exception($link -> error);}
-		else { echo "Baza danych o nazwie budget została skutecznie utworzona";}
+		
+		else { echo "baza ok <br/>";
+		
+			$link -> close();
+			
+			createUserTable();
+			createOtherTables("income", "source", "value");
+			createOtherTables("life", "credit", "payment");
+			createOtherTables("loans", "credit", "payment");
+			createOtherTables("mpay", "credit", "payment");
+
+			
+		}
+		
+		
+		}
 	
-	}
-		
-		
 	}
 	catch(Exception $e) {
 		echo "Coś poszło nie tak sprawdź dane i spróbuj ponownie";
 	}
+		
+	//$link -> close();			
 	
 }
-
+		function createUserTable(){
+				$link = new mysqli($_POST["server"], $_POST["user"], $_POST["pass"], "budget");
+			
+				if($link -> connect_errno != 0) {
+			
+				throw new Exception($link -> error);
+			
+				}
+				
+				else {
+				$query = "CREATE TABLE users (
+				id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+				nick TEXT NOT NULL,
+				email TEXT NOT NULL,
+				password TEXT NOT NULL		
+				)"; 
+					
+				$result = $link -> query($query);
+		
+				if(!$result) {throw new Exception($link -> error);}
+					
+				else echo "Tabela users ok <br/>";
+				
+				
+				}
+			$link -> close();
+			}
+			
+			function createOtherTables($name, $textColumn, $valueColumn){
+				$link = new mysqli($_POST["server"], $_POST["user"], $_POST["pass"], "budget");
+			
+				if($link -> connect_errno != 0) {
+			
+				throw new Exception($link -> error);
+			
+				}
+				
+				else {
+				$query = "CREATE TABLE $name (
+				id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+				userid  INT(11) NOT NULL,
+				$textColumn TEXT NOT NULL,
+				$valueColumn INT(11) NOT NULL		
+				)"; 
+					
+				$result = $link -> query($query);
+		
+				if(!$result) {throw new Exception($link -> error);}
+					
+				else echo "Tabela '$name' ok <br/>";
+				
+				
+				}
+			$link -> close();
+			}
+				
 
 ?>
 
