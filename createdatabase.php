@@ -122,7 +122,7 @@ if(isset($_POST["database"])){
 	
 </head>
 <body>
-<div><span>Stwórz bazę danych potzebną do prawidłowego działania aplikacji</span></div>
+<div><span>Stwórz bazę danych potrzebną do prawidłowego działania aplikacji</span></div>
 <form method="post">
 	<table>
 		<thead>
@@ -144,7 +144,7 @@ if(isset($_POST["database"])){
 		</thead>
 	</table>
 	<input type="submit" value="Utwórz Bazę"/>
-	<?php if(isset($message) and $message!="") echo $message ?>
+	<?php if(isset($message) and $message!="") echo "<div>".$message."</div>" ?>
 
 </form>
 </body>
