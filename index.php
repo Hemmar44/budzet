@@ -21,7 +21,7 @@ if(isset($_SESSION["con_error"])) {echo["con_error"];}
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 	<script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
